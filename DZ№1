@@ -1,0 +1,15 @@
+import random
+
+c = 'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0123456789'
+k = 'ЦУКЕНГШЩЗХФЫВАПРОЛДЖЭЯЧСМИТЬБЮйцукенгшщзхъфывапролджэячсмитьбю'
+a = str(input('Использовать кириллицу?'+"\n"))
+b = int(input('Длина пароля?'+"\n"))
+password =''
+if (a=='Да') or (a=='да'):
+    for i in range(b):
+          password += random.choice(c+k)
+    print(password)
+else:
+    for i in range(b):
+          password += random.choice(c)
+    print(password)
